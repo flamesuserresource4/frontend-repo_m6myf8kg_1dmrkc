@@ -1,5 +1,5 @@
-import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import SafeSpline from './SafeSpline'
 
 export default function Section3D({ id, lang, titleEn, titleAr, descEn, descAr, scene }) {
   const isAr = lang === 'ar'
@@ -17,7 +17,7 @@ export default function Section3D({ id, lang, titleEn, titleAr, descEn, descAr, 
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className={isAr ? 'lg:order-1' : ''}>
           <div className="aspect-[16/10] rounded-2xl border border-white/10 bg-white/5 overflow-hidden">
-            <Spline scene={scene} style={{ width: '100%', height: '100%' }} />
+            <SafeSpline scene={scene} style={{ width: '100%', height: '100%' }} />
           </div>
         </motion.div>
       </div>

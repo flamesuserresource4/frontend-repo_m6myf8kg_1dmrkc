@@ -1,5 +1,5 @@
-import Spline from '@splinetool/react-spline'
 import { motion } from 'framer-motion'
+import SafeSpline from './SafeSpline'
 
 export default function Hero({ lang }) {
   const t = {
@@ -28,7 +28,7 @@ export default function Hero({ lang }) {
       </div>
 
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/FduaNp3csZktbOi3/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        <SafeSpline scene="https://prod.spline.design/FduaNp3csZktbOi3/scene.splinecode" style={{ width: '100%', height: '100%' }} />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28">
